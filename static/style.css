@@ -1,0 +1,234 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.container {
+    max-width: 600px;
+    width: 100%;
+    background-color: #252424;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #fff;
+    font-weight: 550;
+}
+
+select, input[type="checkbox"], input[type="radio"], button {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.checkbox-group, .radio-group {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin-top: 9px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Prediction Results Section */
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+/* Container styling */
+.container {
+    max-width: 700px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* For chart responsiveness */
+canvas {
+    max-width: 100%;
+}
+
+/* Styling for User Inputs */
+.user-inputs {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #585353;
+    border-radius: 8px;
+}
+
+.user-inputs h6 {
+    color: #fff;
+    font-size: 1rem;
+    margin: 5px 0;
+    font-weight: 100;
+}
+
+.user-inputs h6 strong {
+    color: #d3cfcf;
+    font-size: 1rem;
+}
+
+/* Styling for the Chart */
+#probabilityChart {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    select, input[type="checkbox"], input[type="radio"], button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    select, input[type="checkbox"], input[type="radio"], button {
+        font-size: 13px;
+        padding: 6px;
+    }
+}
+
+
+
+
+
+/* Responsive styling updates */
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #probabilityChart {
+        height: 300px;
+    }
+
+    .user-inputs {
+        padding: 8px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Input field styling */
+input[type="text"], input[list] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Input focus effect */
+input[type="text"]:focus, input[list]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Placeholder text styling */
+input::placeholder {
+    color: #aaa;
+}

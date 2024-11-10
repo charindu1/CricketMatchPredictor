@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Results</h1>
+
+        <!-- Display User Inputs -->
+        <div class="user-inputs">
+            <h6> <strong>Your Team:</strong> {{ request.form['Your_team'] }}</h6>
+            <h6> <strong>Other Team:</strong> {{ request.form['Other_team'] }}</h6>
+            <h6> <strong>Ground:</strong> {{ request.form['ground'] }}</h6>
+            <h6> <strong>Match Type: </strong>{{ request.form['Type'] }}</h6>
+            <h6> <strong>Toss:</strong> {{ request.form['Toss'] }}</h6>
+            <h6> <strong>Batting:</strong> {{ request.form['Bat'] }}</h6>
+        </div>
+        
+        <canvas id="probabilityChart"></canvas>
+
+        <script>
+            const ctx = document.getElementById('probabilityChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Win', 'Loss', 'Draw', 'Tie'],
+                    datasets: [{
+                        label: 'Probability (%)',
+                        data: [
+                            {{ results.win_probability }},
+                            {{ results.loss_probability }},
+                            {{ results.draw_probability }},
+                            {{ results.tie_probability }}
+                        ],
+                        backgroundColor: ['#4CAF50', '#FF5733', '#FFC300', '#3498DB']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
